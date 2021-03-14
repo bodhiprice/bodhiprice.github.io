@@ -344,6 +344,7 @@ nav {
     color: $darkGray;
     text-align: right;
     font-weight: bold;
+    text-decoration: none;
 
     @include mobile {
       margin: 0 10px;
