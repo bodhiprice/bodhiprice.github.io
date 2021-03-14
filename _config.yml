@@ -9,10 +9,10 @@ name: Bodhi Price
 author: John Bodhi Price
 
 # Short bio or description (displayed in the header)
-description: Cloud Engineer and Sreverless Architect
+description: Cloud Engineer and Serverless Architect
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /images/reverie.png
+avatar: https://avatars.githubusercontent.com/u/2105211?s=400&u=42f3e45492d83d2c29535e4bdecc0477677ff5e4&v=4
 
 #
 # Flags below are optional
