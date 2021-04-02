@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serverless quick tip
+title: Serverless quick tip: Use multi-region, active-active architectures for performance and resiliency
 categories: [aws, serverless]
 ---
 
