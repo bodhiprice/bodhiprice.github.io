@@ -4,7 +4,7 @@ title: Serverless quick tip&#58; Use multi-region, active-active architectures f
 categories: [aws, serverless]
 ---
 
-This is a quick post that is a rebuttal to some tweets I saw this past week advising people to avoid trying multi-region architectures because they are too much work and will kill innovation in other areas. Generally, this is bad advice. I understand there are systems that don't lend themselves to easily doing multi-region and in those cases, it probably doesn't make sense. But there are approaches that **do** lend themselves to these sorts of architectures with not much work - and the payoff can be big.
+This post is a quick rebuttal to some tweets I saw this past week advising people to avoid trying multi-region architectures because they are too much work and will kill innovation in other areas. Generally, this is bad advice. I understand there are systems that don't lend themselves to easily doing multi-region and in those cases, it probably doesn't make sense. But there are approaches that **do** lend themselves to this sort of architecture with not much work - and the payoff can be big.
 
 Of couse, I'm thinking of serverless here. It's another in a long list of advantages serverless brings to the table. One of the services I built at my current job that uses multi-region active-active gets about 8 million requests per month and has not only never gone down in the nearly two years it has been in service, it has also provided big performance benefits. Our target audience is the US. However, we get signficant (and growing) traffic from Asia. Prior to doing multi-region, those users were seeing some pretty lousy Time To First Byte numbers.
 
