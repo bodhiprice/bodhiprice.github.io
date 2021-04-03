@@ -8,7 +8,7 @@ This post is a quick rebuttal to some tweets I saw this past week advising peopl
 
 Of couse, I'm thinking of serverless here. It's another in a long list of advantages serverless brings to the table. One of the multi-region, active-active services I built at my current job gets about 8 million requests per month. It has not only never gone down in the nearly two years it has been in service, it has also provided big performance benefits. 
 
-Our target audience is the US. However, we get signficant (and growing) traffic from Asia. Prior to doing multi-region, those users were seeing some pretty lousy Time To First Byte numbers. And the cost to do multi-region for this service was trivial. The increased cost was mostly around syncing data with DynamoDB global tables.
+Our target audience is the US. However, we get signficant (and growing) traffic from Asia. Prior to doing multi-region, those users were seeing some pretty lousy Time To First Byte numbers. And the cost to do multi-region for this service was trivial and mostly related to syncing data with DynamoDB global tables.
 
 There are a number of tutorials I will link to below, but the basic steps to get a multi-region, active-active architecture set up on AWS are:
 1. Deploy your service/app to the desired regions.
