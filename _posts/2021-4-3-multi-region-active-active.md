@@ -10,9 +10,9 @@ Of couse, I'm thinking of serverless here. It's another in a long list of advant
 
 Our target audience is the US. However, we get signficant (and growing) traffic from Asia. Prior to doing multi-region, those users were seeing some pretty lousy Time To First Byte numbers. And the cost to do multi-region for this service was trivial and mostly related to syncing data with DynamoDB global tables.
 
-There are a number of tutorials I will link to below, but the basic steps to get a multi-region, active-active architecture set up on AWS are:
+There are a number of tutorials I will link to below, but the basic steps to get a typical multi-region, active-active serverless architecture set up on AWS are:
 1. Deploy your service/app to the desired regions.
-2. Depending on your service, set up [DynamoDB global tables](https://aws.amazon.com/dynamodb/global-tables/) so your data is co-located with your application.
+2. If your service is using Dynamo as the data store, set up [DynamoDB global tables](https://aws.amazon.com/dynamodb/global-tables/) so your data is co-located with your application.
 3. If you're using API Gateway, configure the [custom domain name](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-custom-domain-names.html) (e.g. api.example.com) in each region.
 4. Configure [health checks in Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating.html) for each region. You won't use the custom domain name here, but rather the endpoint provided by API Gateway (or whatever other service you are using).
 5. Add the [latency-based DNS records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency) in Route 53. Each record will be for the same domain but will point to a different origin URL for each region and will use the health check you set up for that region.
