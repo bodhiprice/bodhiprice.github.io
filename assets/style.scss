@@ -711,6 +711,12 @@ Modules - reusable parts of our design
   margin: 0 -2px 0 -5px;
 }
 
+.footer-icon {
+  display: inline-block;
+  height: 36px;
+  width: auto;
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
     width: 60px;
